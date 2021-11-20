@@ -26,35 +26,35 @@
 <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>Nome completo <i class="fas fa-quote-right" style="color: #00A859;"></i></label>
+        <label>Nome completo </label>
             <input type="text" name="nome" class="form-control" value="<?php echo e(old ('nome')); ?>">
 </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>CPF <i class="fas fa-fingerprint" style="color: #FFCC29;"></i></label>
+        <label>CPF </label>
             <input type="text" name="cpf" class="form-control" value="<?php echo e(old ('cpf')); ?>">
 </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>Telefone <i class="fas fa-phone-alt" style="color: #3E4095;"></i></label>
+        <label>Telefone </label>
             <input type="text" name="telefone" class="form-control" value="<?php echo e(old ('telefone')); ?>">
 </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>Email <i class="fas fa-at" style="color: #00A859;"></i></label>
+        <label>Email </label>
             <input type="text" name="email" class="form-control" value="<?php echo e(old ('email')); ?>">
 </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>Preferência de bola <i class="fas fa-futbol" style="color: #FFCC29;"></i></label>
+        <label>Preferência de bola </label>
             <select name="id_bola" class="form-control">
                 <option value="selected" disabled selected >Selecione a bola da preferência do jogador</option>
                     <?php $__currentLoopData = $bolas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -65,8 +65,8 @@
 </div>
 
 <div class="btn-group" role="group" aria-label="Exemplo básico">
-    <button type="submit" class="btn btn-success"> <i class="fas fa-save"></i>   Salvar</button>
-    <a href="/jogador" class="btn btn-primary"> <i class="fas fa-long-arrow-alt-left"></i> Voltar</a></button>
+    <button style="background-color:white; border-color:black; color:black" type="submit" class="btn btn-success"> <i class="fas fa-save"></i>   Salvar</button>
+    <a style="background-color:white; border-color:black; color:black" href="/jogador" class="btn btn-primary"> <i class="fas fa-long-arrow-alt-left"></i> Voltar</a></button>
 </div>
 
 </form>

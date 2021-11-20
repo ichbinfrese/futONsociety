@@ -85,13 +85,13 @@ unset($__errorArgs, $__bag); ?>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button style="background-color: black; border-color: black; color: white" type="submit" class="btn btn-primary">
                                     <?php echo e(__('Login')); ?>
 
                                 </button>
 
                                 <?php if(Route::has('password.request')): ?>
-                                    <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
+                                    <a style="color: black" class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
                                         <?php echo e(__('Esqueceu a senha?')); ?>
 
                                     </a>

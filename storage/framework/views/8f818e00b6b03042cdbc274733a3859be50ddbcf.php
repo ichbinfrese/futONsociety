@@ -16,7 +16,7 @@
 <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
 <div class="form-row">
     <div class="col-6">
-        <input type="text" class="form-control" placeholder="Digite o título da reserva de horário que deseja buscar" name="titulo" id="">
+        <input style="background-color:white; border-color:black; color:black" type="text" class="form-control" placeholder="Digite o título da reserva de horário que deseja buscar" name="titulo" id="">
 </div>
 
 <div class="col-6">

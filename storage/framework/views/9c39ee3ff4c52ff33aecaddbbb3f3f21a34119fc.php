@@ -26,35 +26,35 @@
 <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>Nome <i class="fas fa-quote-right" style="color: #00A859;"></i></label>
+        <label>Nome </label>
             <input type="text" name="nome" class="form-control" value="<?php echo e(old ('nome')); ?>">
 </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>Marca <i class="fas fa-comment-dollar" style="color: #FFCC29;"></i></label>
+        <label>Marca </label>
             <input type="text" name="marca" class="form-control" value="<?php echo e(old ('marca')); ?>">
 </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>Composição <i class="fas fa-dolly" style="color: #3E4095;"></i></label>
+        <label>Composição </label>
             <input type="text" name="composicao" class="form-control" value="<?php echo e(old ('composicao')); ?>">
 </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-6">
-        <label>Circunferência <i class="fas fa-question-circle" style="color: #3E4095;"></i></label>
+        <label>Circunferência </label>
             <input type="text" name="circunferencia" class="form-control" value="<?php echo e(old ('circunferencia')); ?>">
 </div>
 </div>
 
 <div class="btn-group" role="group" aria-label="Exemplo básico">
-    <button type="submit" class="btn btn-success"> <i class="fas fa-save"></i>   Salvar</button>
-    <a href="/bola" class="btn btn-primary"> <i class="fas fa-long-arrow-alt-left"></i> Voltar</a></button>
+    <button style="background-color:white; border-color:black; color:black" type="submit" class="btn btn-success"> <i class="fas fa-save"></i>   Salvar</button>
+    <a style="background-color:white; border-color:black; color:black" href="/bola" class="btn btn-primary"> <i class="fas fa-long-arrow-alt-left"></i> Voltar</a></button>
 </div>
 
 </form>

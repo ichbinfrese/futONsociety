@@ -82,8 +82,8 @@
 </div>
 
 <div class="btn-group" role="group" aria-label="Exemplo básico">
-    <button type="submit" class="btn btn-success"> <i class="fas fa-save"></i>   Salvar</button>
-    <a href="/agendahorario" class="btn btn-primary"> <i class="fas fa-long-arrow-alt-left"></i> Voltar</a></button>
+    <button style="background-color:white; border-color:black; color:black" type="submit" class="btn btn-success"> <i class="fas fa-save"></i> Salvar</button>
+    <a style="background-color:white; border-color:black; color:black" href="/agendahorario" class="btn btn-primary"> <i class="fas fa-long-arrow-alt-left"></i> Voltar</a></button>
 </div>
 
 </form>
