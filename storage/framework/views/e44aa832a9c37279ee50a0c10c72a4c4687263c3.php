@@ -15,7 +15,7 @@
                         <?php echo csrf_field(); ?>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Email Address')); ?></label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Endereço de e-mail')); ?></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control <?php $__errorArgs = ['email'];
@@ -43,7 +43,7 @@ unset($__errorArgs, $__bag); ?>
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Password')); ?></label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Senha')); ?></label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control <?php $__errorArgs = ['password'];
@@ -76,7 +76,7 @@ unset($__errorArgs, $__bag); ?>
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" <?php echo e(old('remember') ? 'checked' : ''); ?>>
 
                                     <label class="form-check-label" for="remember">
-                                        <?php echo e(__('Remember me')); ?>
+                                        <?php echo e(__('Lembrar de mim')); ?>
 
                                     </label>
                                 </div>
@@ -92,7 +92,7 @@ unset($__errorArgs, $__bag); ?>
 
                                 <?php if(Route::has('password.request')): ?>
                                     <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
-                                        <?php echo e(__('Forgot your password?')); ?>
+                                        <?php echo e(__('Esqueceu a senha?')); ?>
 
                                     </a>
                                 <?php endif; ?>

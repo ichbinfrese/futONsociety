@@ -16,12 +16,12 @@
 <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
 <div class="form-row">
     <div class="col-6">
-        <input type="text" class="form-control" placeholder="Digite o nome da bola que deseja buscar" name="nome" id="">
+        <input style="background-color:white; border-color:black; color:black" type="text" style="color: black" class="form-control" placeholder="Digite o nome da bola que deseja buscar" name="nome" id="">
 </div>
 
 <div class="col-6">
-    <button type="submit" class="btn btn-outline-primary"> <i class="fas fa-search"></i> Buscar</button>
-        <a href="<?php echo e(url('/bola/create')); ?>" class="btn btn-outline-success"> <i class="fas fa-plus"></i> Cadastrar</a>
+    <button style="background-color:white; border-color:black; color:black" type="submit" class="btn btn-outline-primary"> <i class="fas fa-search"></i> Buscar</button>
+    <a style="background-color:white; border-color:black; color:black" href="<?php echo e(url('/bola/create')); ?>" class="btn btn-outline-success"> <i class="fas fa-plus"></i> Cadastrar</a>
 </div>
 </div>
 </form>
@@ -48,8 +48,8 @@
             <td><?php echo e($item->composicao); ?></td>
             <td><?php echo e($item->circunferencia); ?></td>
 
-        <td><a href="<?php echo e(action('App\Http\Controllers\BolaController@edit',$item->id )); ?>" style='color:orange;' ><i class='fas fa-user-edit'></i></a> </td>
-        <td><a href="<?php echo e(action('App\Http\Controllers\BolaController@delete',$item->id )); ?>"style='color:red;'><i class='fas fa-trash-alt'></i></a> </td>
+        <td><a href="<?php echo e(action('App\Http\Controllers\BolaController@edit',$item->id )); ?>" style='color: black;' ><i class='fas fa-user-edit'></i></a> </td>
+        <td><a href="<?php echo e(action('App\Http\Controllers\BolaController@delete',$item->id )); ?>"style='color: black;'><i class='fas fa-trash-alt'></i></a> </td>
  </tr>
 
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

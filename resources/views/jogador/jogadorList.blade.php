@@ -15,15 +15,15 @@
 <br>
 
 <form action="{{ action('App\Http\Controllers\JogadorController@search')}}" method="post">
-<input type="hidden" name="_token" value="{{{ csrf_token() }}}">
+<input type="hidden" name="_token" value="{{{ csrf_token() }}}"> 
 <div class="form-row">
     <div class="col-6">
-        <input type="text" class="form-control" placeholder="Digite o nome do jogador que deseja buscar" name="nome" id="">
+        <input style="background-color:white; border-color:black; color:black" type="text" class="form-control" placeholder="Digite o nome do jogador que deseja buscar" name="nome" id="">
 </div>
 
 <div class="col-6">
-    <button type="submit" class="btn btn-outline-primary"> <i class="fas fa-search"></i> Buscar</button>
-    <a href="{{ url('/jogador/create') }}" class="btn btn-outline-success"> <i class="fas fa-plus"></i> Cadastrar</a>
+    <button style="background-color:white; border-color:black; color:black" type="submit" class="btn btn-outline-primary"> <i class="fas fa-search"></i> Buscar</button>
+    <a style="background-color:white; border-color:black; color:black" href="{{ url('/jogador/create') }}" class="btn btn-outline-success"> <i class="fas fa-plus"></i> Cadastrar</a>
 </div>
 </div>
 
@@ -53,8 +53,8 @@
             <td>{{$item->email}}</td>
             <td>{{$item->bola->nome}}</td>
 
-        <td><a href="{{ action('App\Http\Controllers\JogadorController@edit',$item->id )}}" style='color:orange;' ><i class='fas fa-user-edit'></i></a> </td>
-        <td><a href="{{ action('App\Http\Controllers\JogadorController@delete',$item->id )}}"style='color:red;'><i class='fas fa-trash-alt'></i></a> </td>
+        <td><a href="{{ action('App\Http\Controllers\JogadorController@edit',$item->id )}}" style='color: black;' ><i class='fas fa-user-edit'></i></a> </td>
+        <td><a href="{{ action('App\Http\Controllers\JogadorController@delete',$item->id )}}"style='color: black;'><i class='fas fa-trash-alt'></i></a> </td>
     </tr>
 
 @endforeach

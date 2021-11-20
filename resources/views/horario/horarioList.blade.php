@@ -22,9 +22,9 @@
 </div>
 
 <div class="col-6">
-    <button type="submit" class="btn btn-outline-primary"> <i class="fas fa-search"></i> Buscar</button>
-    <a href="{{ url('/agendahorario/create') }}" class="btn btn-outline-success"> <i class="fas fa-plus"></i> Cadastrar</a>
-    <a href="{{ url('/pdfAgendaHorario') }}" class="btn btn-danger btn-lg"><i class="fas fa-file-pdf"></i></a>
+    <button style="background-color:white; border-color:black; color:black" type="submit" class="btn btn-outline-primary"> <i class="fas fa-search"></i> Buscar</button>
+    <a style="background-color:white; border-color:black; color:black" href="{{ url('/agendahorario/create') }}" class="btn btn-outline-success"> <i class="fas fa-plus"></i> Cadastrar</a>
+    <a style="background-color:white; border-color:black; color:black" href="{{ url('/pdfAgendaHorario') }}" class="btn btn-danger btn-lg"><i class="fas fa-file-pdf"></i></a>
 </div>
 </div>
 
@@ -57,8 +57,8 @@
             <td>{{$item->bola->nome}}</td>
             <td>{{$item->quadra->nome}}</td>
 
-        <td><a href="{{ action('App\Http\Controllers\AgendaHorarioController@edit',$item->id )}}" style='color:orange;' ><i class='fas fa-user-edit'></i></a> </td>
-        <td><a href="{{ action('App\Http\Controllers\AgendaHorarioController@delete',$item->id )}}"style='color:red;'><i class='fas fa-trash-alt'></i></a> </td>
+        <td><a href="{{ action('App\Http\Controllers\AgendaHorarioController@edit',$item->id )}}" style='color: black;' ><i class='fas fa-user-edit'></i></a> </td>
+        <td><a href="{{ action('App\Http\Controllers\AgendaHorarioController@delete',$item->id )}}"style='color: black;'><i class='fas fa-trash-alt'></i></a> </td>
     </tr>
 
 @endforeach
