@@ -68,7 +68,8 @@ class AuthRouteMethods
     }
 
     /**
-     * Register the typical confirm password routes for an application.
+     *
+     *  Register the typical confirm password routes for an application.
      *
      * @return callable
      */
