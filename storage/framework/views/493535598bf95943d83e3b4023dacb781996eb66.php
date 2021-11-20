@@ -24,7 +24,7 @@
                         <a href="<?php echo e(route('login')); ?>" class="text-sm text-gray-700 underline">Login</a>
 
                         <?php if(Route::has('register')): ?>
-                            <a href="<?php echo e(route('register')); ?>" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                            <a href="<?php echo e(route('register')); ?>" class="ml-4 text-sm text-gray-700 underline">Novo usuário</a>
                         <?php endif; ?>
                     <?php endif; ?>
                 </div>
