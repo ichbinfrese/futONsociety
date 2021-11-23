@@ -15,6 +15,7 @@ class Funcionario extends Model
             'cpf' => 'required|max:20',
             'telefone' => 'required|max:18',
             'email' => 'required|max:80',
+            'nome_arquivo' => 'required|image|mimes:jpeg,jpg,png|max:2048',
         ];
     }
 
@@ -29,6 +30,7 @@ class Funcionario extends Model
             'telefone.max' => 'Só é permitida a inserção de 18 caracteres no campo telefone',
             'email.required' => 'O campo email é obrigatório',
             'email.max' => 'Só é permitida a inserção de 80 caracteres no campo email',
+            'nome_arquivo' => 'São permitidos apenas os formatos de imagem jpeg, jpg e png',
         ];
     }
 }

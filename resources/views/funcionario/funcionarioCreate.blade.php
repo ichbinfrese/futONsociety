@@ -24,6 +24,7 @@
 </div>
 @endif
 
+<form action="{{ action('App\Http\Controllers\FuncionarioController@save', 0) }}" method="post" enctype="multipart/form-data" style="color: #000000;">
 <form action="{{ action('App\Http\Controllers\FuncionarioController@save', 0) }}" method="post" style="color: #000000;">
 <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 <div class="form-row">
@@ -37,7 +38,8 @@
     <div class="form-group col-md-6">
         <label>CPF </label>
             <input type="text" name="cpf" class="form-control" value="{{ old ('cpf') }}">
-</div></div>
+</div>
+</div>
 
 <div class="form-row">
     <div class="form-group col-md-6">
@@ -50,6 +52,13 @@
     <div class="form-group col-md-6">
         <label>Email </label>
             <input type="text" name="email" class="form-control" value="{{ old ('email') }}">
+</div>
+</div>
+
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label>Imagem do Funcionario </label>
+            <input type="file" name="nome_arquivo" class="form-control" value="{{ old ('imagem') }}">
 </div>
 </div>
 

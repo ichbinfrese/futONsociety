@@ -76,10 +76,22 @@ class FuncionarioController extends Controller
             $funcionario->cpf = $request->input('cpf');
             $funcionario->telefone = $request->input('telefone');
             $funcionario->email = $request->input('email');
+            
 
             $funcionario->save();
 
             return redirect()->action('App\Http\Controllers\FuncionarioController@list');
         }
+        $input = $request->all();
+        $image = $request->file("nome_arquivo");
+
+            if ($image){
+            $nome_arquivo = date('YmdHis') .".".$image->getClientOriginalExtension();
+            $request->nome_arquivo->storeAs('public/imagem', $nome_arquivo);
+            $input['nome_arquivo'] = $nome_arquivo;
+        }
+        Funcionario::create($input);
+
+        return redirect()->action('App\Http\Controllers\FuncionarioController@list');
     }
 }
