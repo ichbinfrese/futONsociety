@@ -97,9 +97,11 @@ class FuncionarioController extends Controller
             $nome_arquivo = date('YmdHis') .".".$image->getClientOriginalExtension();
             $request->nome_arquivo->storeAs('public/imagem', $nome_arquivo);
             $input['nome_arquivo'] = $nome_arquivo;
-        }
-        Funcionario::create($input);
 
-        return redirect()->action('App\Http\Controllers\FuncionarioController@list');
+            Funcionario::create($input);
+            // $funcionario->save();
+
+            return redirect()->action('App\Http\Controllers\FuncionarioController@list');
+        }
     }
 }
