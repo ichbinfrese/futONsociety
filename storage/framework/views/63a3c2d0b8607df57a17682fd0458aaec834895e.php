@@ -34,6 +34,7 @@
 <thead>
 <tr>
     <th scope="col">ID</th>
+    <th scope="col">Imagem</th>
     <th scope="col">Nome </th>
     <th scope="col">CPF </th>
     <th scope="col">Telefone </th>
@@ -43,9 +44,15 @@
 </tr>
 </thead>
 <tbody>
+
         <?php $__currentLoopData = $funcionarios; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php 
+            !empty($item->nome_arquivo) ? $nome_arquivo = $item->nome_arquivo : $nome_arquivo = "sem imagem.png";
+        ?>
+
         <tr>
             <td><?php echo e($item->id); ?></td>
+            <td> <img src="/storage/imagem/<?php echo e($nome_arquivo); ?>" width="100px" /> </td>
             <td><?php echo e($item->nome); ?></td>
             <td><?php echo e($item->cpf); ?></td>
             <td><?php echo e($item->telefone); ?></td>
@@ -60,5 +67,4 @@
 </table>
 
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\futONsociety\resources\views/funcionario/funcionarioList.blade.php ENDPATH**/ ?>

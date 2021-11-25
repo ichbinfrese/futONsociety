@@ -21,10 +21,18 @@ class FuncionarioController extends Controller
         return view('funcionario/funcionarioCreate');
     }
 
-    public function edit($id)
+    public function edit(request $request, $id)
     {
-
         $funcionario  = Funcionario::find($id);
+
+        $input = $request->all();
+        $image = $request->file("nome_arquivo");
+
+            if ($image){
+            $nome_arquivo = date('YmdHis') .".".$image->getClientOriginalExtension();
+            $request->nome_arquivo->storeAs('public/imagem', $nome_arquivo);
+        }
+        Funcionario::create($input);
 
         return view('funcionario/funcionarioEdit')->with('funcionario', $funcionario);
     }
@@ -56,7 +64,7 @@ class FuncionarioController extends Controller
         return view('funcionario/funcionarioList')->with('funcionarios', $funcionarios);
     }
 
-    public function save(Request $request, $id)
+    public function save(Request  $request, $id,)
     {
         Validator::make($request->all(), Funcionario::rules(), Funcionario::message())->validate();
 

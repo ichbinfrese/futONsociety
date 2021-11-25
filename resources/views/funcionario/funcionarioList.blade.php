@@ -36,6 +36,7 @@
 <thead>
 <tr>
     <th scope="col">ID</th>
+    <th scope="col">Imagem</th>
     <th scope="col">Nome </th>
     <th scope="col">CPF </th>
     <th scope="col">Telefone </th>
@@ -45,9 +46,15 @@
 </tr>
 </thead>
 <tbody>
+
         @foreach ($funcionarios as $item)
+        @php 
+            !empty($item->nome_arquivo) ? $nome_arquivo = $item->nome_arquivo : $nome_arquivo = "sem imagem.png";
+        @endphp
+
         <tr>
             <td>{{$item->id}}</td>
+            <td> <img src="/storage/imagem/{{$nome_arquivo}}" width="100px" /> </td>
             <td>{{$item->nome}}</td>
             <td>{{$item->cpf}}</td>
             <td>{{$item->telefone}}</td>

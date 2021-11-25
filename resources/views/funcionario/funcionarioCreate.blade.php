@@ -55,11 +55,17 @@
 </div>
 </div>
 
-<div class="form-row">
+@php 
+!empty($funcionario->nome_arquivo) ? $nome_arquivo = $funcionario->nome_arquivo : $nome_arquivo = "sem imagem.png";
+@endphp
+
+<div class="form-row" >
     <div class="form-group col-md-6">
-        <label>Imagem do Funcionario </label>
-            <input type="file" name="nome_arquivo" class="form-control" value="{{ old ('imagem') }}">
+        <label>Imagem do Funcionário </label>
+            <input type="file" name="nome_arquivo" class="form-control"  value="{{ old ('imagem') }}"  >
+            <img src="/storage/imagem/{{$nome_arquivo}}" width="200px" />
 </div>
+
 </div>
 
 <div class="btn-group" role="group" aria-label="Exemplo básico">
@@ -70,4 +76,3 @@
 </form>
 
 @endsection
-

@@ -53,11 +53,17 @@
 </div>
 </div>
 
-<div class="form-row">
+<?php 
+!empty($funcionario->nome_arquivo) ? $nome_arquivo = $funcionario->nome_arquivo : $nome_arquivo = "sem imagem.png";
+?>
+
+<div class="form-row" >
     <div class="form-group col-md-6">
-        <label>Imagem do Funcionario </label>
-            <input type="file" name="nome_arquivo" class="form-control" value="<?php echo e(old ('imagem')); ?>">
+        <label>Imagem do Funcionário </label>
+            <input type="file" name="nome_arquivo" class="form-control"  value="<?php echo e(old ('imagem')); ?>"  >
+            <img src="/storage/imagem/<?php echo e($nome_arquivo); ?>" width="200px" />
 </div>
+
 </div>
 
 <div class="btn-group" role="group" aria-label="Exemplo básico">
@@ -68,6 +74,4 @@
 </form>
 
 <?php $__env->stopSection(); ?>
-
-
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\futONsociety\resources\views/funcionario/funcionarioCreate.blade.php ENDPATH**/ ?>
